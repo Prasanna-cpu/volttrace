@@ -1,3 +1,21 @@
 spring:
   application:
-    name: user-service
+    name: USER-SERVICE
+
+  datasource:
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+    generate-ddl: true
+    show-sql: true
+
+
+server:
+  port: ${PORT}
