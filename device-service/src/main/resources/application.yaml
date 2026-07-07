@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: DEVICE-SERVICE
+
+  datasource:
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    locations: classpath:db/migrations
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        format_sql: true
+    generate-ddl: true
+    show-sql: true
+
+
+server:
+  port: ${PORT}
+
