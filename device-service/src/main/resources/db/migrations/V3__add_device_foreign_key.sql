@@ -1,0 +1,4 @@
+ALTER TABLE devices
+ADD CONSTRAINT fk_device_user
+FOREIGN KEY (user_id) REFERENCES users (id)
+ON DELETE CASCADE;
